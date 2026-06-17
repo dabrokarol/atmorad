@@ -2,13 +2,16 @@
 
 ## Monte Carlo atmospheric radiative transfer in Python.
 
-[![PyPI version](https://img.shields.io/pypi/v/atmorad.svg?color=blue)](https://pypi.org/project/atmorad/)[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![CI](https://github.com/dabrokarol/atmorad/actions/workflows/ci.yml/badge.svg)](https://github.com/dabrokarol/atmorad/actions)
+[![PyPI version](https://img.shields.io/pypi/v/atmorad.svg?color=blue)](https://pypi.org/project/atmorad/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CI](https://github.com/dabrokarol/atmorad/actions/workflows/ci.yml/badge.svg)](https://github.com/dabrokarol/atmorad/actions)
 
-| **2D surface absorption map**                                | **Sample photon paths**                                       |
+| **2D surface absorption map**                            | **Sample photon paths**                                   |
 |:---------------------------------------------------------|:----------------------------------------------------------|
-| ![map](https://raw.githubusercontent.com/dabrokarol/atmorad/main/docs/img/surface_absorption_map.png)                                                   | ![paths](https://raw.githubusercontent.com/dabrokarol/atmorad/main/docs/img/3d_photon_paths.png)                                                    |
+| ![map](https://raw.githubusercontent.com/dabrokarol/atmorad/main/docs/img/surface_absorption_map.png) | ![paths](https://raw.githubusercontent.com/dabrokarol/atmorad/main/docs/img/3d_photon_paths.png) |
 | **Vertical flux profile**                                    | **Vertical absorption profile**                               |
-| ![profile](https://raw.githubusercontent.com/dabrokarol/atmorad/main/docs/img/vertical_flux_profile.png)                                                   | ![hist](https://raw.githubusercontent.com/dabrokarol/atmorad/main/docs/img/absorption_profile.png)                                                    |
+| ![profile](https://raw.githubusercontent.com/dabrokarol/atmorad/main/docs/img/vertical_flux_profile.png) | ![hist](https://raw.githubusercontent.com/dabrokarol/atmorad/main/docs/img/absorption_profile.png) |
 | Example outputs generated from the default configuration | |
 
 ## Overview
