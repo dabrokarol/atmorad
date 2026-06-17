@@ -20,6 +20,14 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Atmospheric Science",
     "Development Status :: 3 - Alpha",
 ]
+keywords = [
+    "radiative-transfer",
+    "monte-carlo",
+    "atmospheric-science",
+    "physics",
+    "remote-sensing",
+    "climate",
+]
 dependencies = [
     "numpy>=1.26.0",
     "xarray>=2024.1.0",
@@ -31,14 +39,6 @@ dependencies = [
     "h5netcdf>=1.3.0",
     "tqdm>=4.66.0",
     "tomli-w>=1.2.0",
-]
-keywords = [
-    "radiative-transfer",
-    "monte-carlo",
-    "atmospheric-science",
-    "physics",
-    "remote-sensing",
-    "climate",
 ]
 [project.urls]
 Homepage = "https://github.com/dabrokarol/atmorad"
@@ -54,8 +54,6 @@ source = "vcs"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/atmorad"]
-include-package-data = true
-
 
 [dependency-groups]
 dev = [
