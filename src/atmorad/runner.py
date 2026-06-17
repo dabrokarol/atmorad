@@ -186,7 +186,7 @@ def _yield_results_serial(
     progress_value = multiprocessing.Value("Q", 0)
     done_event = threading.Event()
 
-    global _global_config, _global_scene, _progress_value
+    global _global_config, _global_scene, _progress_value  # not the cleanest approach, but uses the same variables as a parallel version
     _global_config = config
     _global_scene = scene
     _progress_value = progress_value
@@ -204,6 +204,9 @@ def _yield_results_serial(
                 current_photons += size
         finally:
             done_event.set()
+            _global_config = None
+            _global_scene = None
+            _progress_value = None
 
 
 def _yield_results_parallel(
