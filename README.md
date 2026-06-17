@@ -275,6 +275,7 @@ material_out = "ocean"
 <!-- \[\[\[end\]\]\] -->
 
 </details>
+
 ## Loading results
 
 Results are stored as NetCDF4/HDF5 files and can be loaded directly with xarray:
