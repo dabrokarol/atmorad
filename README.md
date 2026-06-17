@@ -23,7 +23,7 @@ The code simulates photon transport through a plane-parallel atmosphere above a 
 
 I started it as a learning project during lectures on Radiative Processes in the Atmosphere at the Faculty of Physics, University of Warsaw.
 
-The original goal was to better understand Monte Carlo radiative transfer by implementing the underlying algorithms from scratch.
+The original goal was to better understand Monte Carlo radiative transfer by implementing the underlying algorithms from scratch. 
 
 It also became an opportunity to learn how to organize a github repository.
 
@@ -278,7 +278,8 @@ material_out = "ocean"
 
 ## Loading results
 
-Results are stored as NetCDF4/HDF5 files and can be loaded directly with xarray:
+<details>
+<summary>Results are stored as NetCDF4/HDF5 files and can be loaded directly with xarray: (click to expand)</summary>
 
 <!-- \[\[\[cog
 import cog
@@ -322,6 +323,7 @@ atmorad --extract-config <path-to-data.nc>
 ```
 
 This creates an `<exp_name>_<scen_name>_config.toml` file in the current working directory.
+</details>
 
 ## Literature
 
