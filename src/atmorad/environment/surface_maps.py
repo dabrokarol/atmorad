@@ -40,7 +40,7 @@ class CheckerboardMap(BaseSurfaceMap):
         half = self.tile_size / 2.0
         return np.where(((x < half) & (y < half)) | ((x >= half) & (y >= half)), 0, 1)
 
-
+# ! Not used yet
 class GridMap(BaseSurfaceMap):
     """
     Args:
@@ -80,5 +80,4 @@ SURFACE_MAPS = {
     "split_half_x": {"class": SplitHalfXMap, "material_keys": ["material_left", "material_right"]},
     "circle": {"class": CircleMap, "material_keys": ["material_in", "material_out"]},
     "checkerboard": {"class": CheckerboardMap, "material_keys": ["material_a", "material_b"]},
-    "grid": {"class": GridMap, "material_keys": ["materials"]},
 }

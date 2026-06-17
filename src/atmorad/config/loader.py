@@ -44,7 +44,7 @@ def _deep_merge_dicts(base: dict, scenario: dict) -> dict:
 
 
 def load_scenarios(config_path: str | Path) -> list[SimConfig]:
-    """Wczytuje TOML i zwraca sekwencyjną listę konfiguracji."""
+    """Reads toml and returns config list based on sweeps and scenarios"""
     path = Path(config_path).resolve()
 
     if not path.exists():
@@ -92,7 +92,7 @@ def load_scenarios(config_path: str | Path) -> list[SimConfig]:
     for base_config in base_configs_data:
         base_name = base_config.get("metadata", {}).get("scenario_name", "baseline")
 
-        # a cartesian product of value combinations
+        # cartesian product of everything
         for combo in itertools.product(*sweep_values):
             scenario_data = copy.deepcopy(base_config)
 
