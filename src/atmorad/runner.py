@@ -341,7 +341,7 @@ def _run_chunk(
         _global_config, chunk_size, seed, _global_scene, detectors, update_progress_value
     )
 
-    # save results to a disk to avoid python serialization
+    # temporarily save results to disk for better performance
     saved_paths = {}
     chunk_id = uuid.uuid4().hex
 
