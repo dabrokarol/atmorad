@@ -4,7 +4,7 @@
 
 [metadata]
 experiment_name = "demo001"
-description     = "a demo simulation of radiative transfer over a heterogenous surface."
+description     = "a demo simulation of radiative transfer over a heterogeneous surface."
 
 [engine]
 random_seed                   = 42
