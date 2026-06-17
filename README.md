@@ -322,9 +322,14 @@ atmorad --extract-config <path-to-data.nc>
 
 This creates an `<exp_name>_<scen_name>_config.toml` file in the current working directory.
 
-## References and literature
+## Literature
 
 - (in Polish) Script for lecture about [Radiative Processes in the Atmosphere](https://www.igf.fuw.edu.pl/~kmark/stacja/wyklady/ProcesyRadiacyjne/2013/WykladRadiacjaKlimat.pdf), Prof. K. Markowicz, Faculty of Physics, University of Warsaw, 2013.
+
+## Original sources of equations and algorithms
+- L. G. Henyey, J. L. Greenstein, 1941, [doi:10.1086/144246](https://doi.org/10.1086/144246) — Henyey-Greenstein phase function.
+- J. R. Frisvad, 2011, [doi:10.1364/JOSAA.28.002436](https://doi.org/10.1364/JOSAA.28.002436) — inverse sampling of the Rayleigh phase function.
+- L. Wang, S. L. Jacques, L. Zheng, 1995, [doi:10.1016/0169-2607(95)01640-F](https://doi.org/10.1016/0169-2607(95)01640-F) — rotation function and inverse sampling of Henyey-Greenstein phase function.
 
 ## Acknowledgments
 
@@ -333,4 +338,4 @@ This creates an `<exp_name>_<scen_name>_config.toml` file in the current working
 
 ## Contributing
 
-Contributions of any size are welcome. [Open an issue](https://github.com/dabrokarol/atmoradsues) to report a bug or to suggest something.
+Contributions of any size are welcome. [Open an issue](https://github.com/dabrokarol/atmorad/issues) to report a bug or to suggest something.
