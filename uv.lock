@@ -24,7 +24,7 @@ wheels = [
 ]
 
 [[package]]
-name = "atmorad-py"
+name = "atmorad"
 source = { editable = "." }
 dependencies = [
     { name = "cmocean" },

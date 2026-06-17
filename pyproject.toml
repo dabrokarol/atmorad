@@ -3,9 +3,9 @@ requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
-name = "atmorad-py"
+name = "atmorad"
 dynamic = ["version"]
-description = "A 3D monte carlo simulation of Atmospheric Radiative Transfer"
+description = "Monte Carlo atmospheric radiative transfer model written in Python"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
@@ -17,6 +17,16 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+    "Development Status :: 3 - Alpha",
+]
+keywords = [
+    "radiative-transfer",
+    "monte-carlo",
+    "atmospheric-science",
+    "physics",
+    "remote-sensing",
+    "climate",
 ]
 dependencies = [
     "numpy>=1.26.0",
@@ -30,6 +40,11 @@ dependencies = [
     "tqdm>=4.66.0",
     "tomli-w>=1.2.0",
 ]
+[project.urls]
+Homepage = "https://github.com/dabrokarol/atmorad"
+Repository = "https://github.com/dabrokarol/atmorad"
+Issues = "https://github.com/dabrokarol/atmorad/issues"
+Changelog = "https://github.com/dabrokarol/atmorad/releases"
 
 [project.scripts]
 atmorad = "atmorad.cli:main"
@@ -39,8 +54,6 @@ source = "vcs"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/atmorad"]
-include-package-data = true
-
 
 [dependency-groups]
 dev = [
@@ -55,7 +68,3 @@ line-length = 100
 [tool.ruff.lint]
 select = ["E", "F", "I"]
 ignore = ["E501"]
-
-[tool.ruff.lint.per-file-ignores]
-# Ignore "unused import" (F401) in all __init__.py files
-"__init__.py" = ["F401"]

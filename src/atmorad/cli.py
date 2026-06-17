@@ -22,7 +22,7 @@ def init_config():
 
 def setup_parser():
     try:
-        __version__ = importlib.metadata.version("atmorad-py")
+        __version__ = importlib.metadata.version("atmorad")
     except importlib.metadata.PackageNotFoundError:
         __version__ = "unknown"
 
@@ -71,7 +71,7 @@ def main():
             return 0
 
         if args.extract_config:
-            from atmorad.output import DataIO
+            from atmorad.output.io import DataIO
 
             DataIO.extract_config(data_path=args.extract_config)
             return 0

@@ -15,7 +15,12 @@ def sun_zenith_to_direction(theta_sun, phi_sun):
     return orientation(cos_theta, sin_theta, cos_phi, sin_phi)
 
 
+# Original source:
+# Wang, Jacques & Zheng (1995),
+# MCML, Comput. Methods Programs Biomed. 47(2), 131-146.
+# doi:10.1016/0169-2607(95)01640-F
 def rotate(direction, cos_theta, sin_theta, cos_phi, sin_phi):
+    """Rotate direction by scattering angles (theta, phi)"""
     result = np.zeros_like(direction)
     big_z = np.abs(direction[Z]) > 0.999
     small_z = ~big_z

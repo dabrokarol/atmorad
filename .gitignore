@@ -1,6 +1,8 @@
 .venv
 env/
 .ruff_cache
+.mypy_cache
+.pytest_cache
 .provenance
 __pycache__/
 fig/*
