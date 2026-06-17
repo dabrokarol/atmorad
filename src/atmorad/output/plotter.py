@@ -49,8 +49,6 @@ class ResultAnalyzer:
         absorbed_surf_pct = abs_surf * 100.0
         absorbed_atm_pct = abs_atm * 100.0
 
-        conservation = outgoing_toa_pct + absorbed_surf_pct + absorbed_atm_pct
-
         return "\n".join(
             [
                 "Simulation complete",
@@ -67,7 +65,6 @@ class ResultAnalyzer:
                 f"{'surface absorption':<24}{absorbed_surf_pct:>6.2f}%",
                 f"{'atmospheric absorption':<24}{absorbed_atm_pct:>6.2f}%",
                 "-" * 30,
-                f"{'energy conservation':<24}{conservation:>6.2f}%",
                 "",
             ]
         )

@@ -101,8 +101,6 @@ toa escape               65.75%
 surface absorption       34.23%
 atmospheric absorption    0.03%
 ------------------------------
-energy conservation     100.00%
-
 
 Result File:
   results/demo001/atmorad_demo001_baseline.nc
