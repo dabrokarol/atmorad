@@ -72,5 +72,5 @@ def run(config_path: str | Path, quiet: bool = False) -> xr.Dataset | list[xr.Da
     return results_list[0] if len(results_list) == 1 else results_list
 
 
-def load(directory: Path | str) -> xr.Dataset:
-    return DataIO.load_simulation_results(Path(directory).resolve())
+def load(data_path: Path | str) -> xr.Dataset:
+    return DataIO.load_simulation_results(Path(data_path).resolve())
