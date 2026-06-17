@@ -44,7 +44,8 @@ class _MonteCarloEngine:
         self.sun_azimuth = source_config.azimuth_angle_deg
         self.weight_threshold = config.engine.roulette_weight_threshold
         self.survival_chance = config.engine.roulette_survival_probability
-        self.weight_multiplier = 1.0 / config.engine.roulette_survival_probability
+        # if no photons survive this variable won't be used
+        self.weight_multiplier = 1.0 / self.survival_chance if self.survival_chance else 0
 
         self.on_progress = progress_callback
 
@@ -121,9 +122,9 @@ class _MonteCarloEngine:
 
             if np.any(low_weight_mask):
                 num_low = np.count_nonzero(low_weight_mask)
-                survive_rolls = rng.random(num_low)
+                survive_randn = rng.random(num_low)
 
-                survivors_submask = survive_rolls < self.survival_chance
+                survivors_submask = survive_randn < self.survival_chance
 
                 survivor_full_mask = np.zeros(batch.active_count, dtype=bool)
                 survivor_full_mask[low_weight_mask] = survivors_submask
