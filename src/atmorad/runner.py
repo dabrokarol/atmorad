@@ -90,7 +90,7 @@ def execute_simulation(
                 simulated_photons += chunk_size
 
                 for det_name, filepath in chunk_dict.items():
-                    with xr.open_dataset(filepath) as chunk_ds:
+                    with xr.open_dataset(filepath, engine="h5netcdf") as chunk_ds:
                         chunk_ds.load()
 
                     if det_name not in accumulated_results:
@@ -350,7 +350,7 @@ def _run_chunk(
 
     for det_name, ds in chunk_ds_dict.items():
         out_path = temp_dir / f"{det_name}_{chunk_id}.nc"
-        ds.to_netcdf(out_path)
+        ds.to_netcdf(out_path, engine="h5netcdf")
         ds.close()
         saved_paths[det_name] = out_path
 
