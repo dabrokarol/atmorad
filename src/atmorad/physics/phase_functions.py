@@ -6,8 +6,11 @@ from atmorad.constants import BOUNDARY_EPSILON
 class Scattering:
     def __init__(self, pdf_array):
         """
-        Takes a raw probability density array, normalizes it,
-        and computes the Cumulative Distribution Function (CDF) for fast sampling.
+        Takes a raw probability density array of cos_theta, normalizes it,
+        and computes the cumulative distribution function (cdf) for fast sampling.
+
+        Args:
+        - pdf_array: probability density of cos_theta
         """
         self.n_precomputed = len(pdf_array)
         self.cos_grid = np.linspace(-1, 1, self.n_precomputed)
@@ -19,11 +22,11 @@ class Scattering:
         """Computes sin and cos of theta, phi used for scattering. Uses `np.interp` to obtain reversed cdf values for given rand_1. Samples phi from uniform distribution [0,2pi].
 
         Args:
-            rand_1 - array of random numbers (uniform(0,1)) used to sample cos_theta
-            rand_2 - array of random numbers (uniform(0,1)) used to sample sin_theta
+            rand_1 - uniform(0,1) samples used to compute cos_theta through inverse cdf
+            rand_2 - uniform(0,1) samples used to compute sin_theta
 
         Returns:
-            np.array((cos_theta, sin_theta, cos_phi, sin_phi)) - trigonometric functions of sampled angles
+            np.array((cos_theta, sin_theta, cos_phi, sin_phi))
         """
         phi = 2 * np.pi * rand_2
 
@@ -36,6 +39,8 @@ class Scattering:
         return np.array((cos_theta, sin_theta, cos_phi, sin_phi))
 
 
+# Source:
+# L. G. Henyey, J. L. Greenstein, Diffuse radiation in the galaxy, [doi:10.1086/144246](https://doi.org/10.1086/144246)
 class HenyeyGreensteinScattering(Scattering):
     def __init__(self, g: float):
         self.g = g
@@ -64,6 +69,8 @@ class IsotropicScattering(Scattering):
         return np.array((cos_theta, sin_theta, np.cos(phi), np.sin(phi)))
 
 
+# Source:
+# J. R. Frisvad, Importance sampling the Rayleigh phase function, [doi:10.1364/JOSAA.28.002436](https://doi.org/10.1364/JOSAA.28.002436)
 class RayleighScattering(Scattering):
     def __init__(self):
         pass

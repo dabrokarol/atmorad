@@ -40,6 +40,7 @@ class CheckerboardMap(BaseSurfaceMap):
         half = self.tile_size / 2.0
         return np.where(((x < half) & (y < half)) | ((x >= half) & (y >= half)), 0, 1)
 
+
 # ! Not used yet
 class GridMap(BaseSurfaceMap):
     """
