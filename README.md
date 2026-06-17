@@ -2,7 +2,7 @@
 
 ## Monte Carlo atmospheric radiative transfer in Python.
 
-[![PyPI version](https://img.shields.io/pypi/v/atmorad-py.svg?color=blue)](https://pypi.org/project/atmorad-py/)[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![CI](https://github.com/dabrokarol/atmorad-py/actions/workflows/ci.yml/badge.svg)](https://github.com/dabrokarol/atmorad-py/actions)
+[![PyPI version](https://img.shields.io/pypi/v/atmorad.svg?color=blue)](https://pypi.org/project/atmorad/)[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![CI](https://github.com/dabrokarol/atmorad-py/actions/workflows/ci.yml/badge.svg)](https://github.com/dabrokarol/atmorad-py/actions)
 
 | **2D surface absorption map**                                | **Sample photon paths**                                       |
 |:---------------------------------------------------------|:----------------------------------------------------------|
@@ -59,13 +59,13 @@ It also became an opportunity to learn how to organize a github repository.
 Using `uv` (Recommended for project isolation, also works very fast):
 
 ```bash
-> uv tool install atmorad-py
+> uv tool install atmorad
 ```
 
 Using `pip`:
 
 ```bash
-> pip install atmorad-py
+> pip install atmorad
 ```
 
 ## Quickstart

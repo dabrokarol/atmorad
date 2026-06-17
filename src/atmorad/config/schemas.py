@@ -10,7 +10,7 @@ from atmorad.constants import TIMESTAMP_FORMAT
 
 def get_engine_version() -> str:
     try:
-        return version("atmorad-py")
+        return version("atmorad")
     except PackageNotFoundError:
         return "unknown-dev"
 

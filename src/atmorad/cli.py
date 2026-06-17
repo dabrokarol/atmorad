@@ -22,7 +22,7 @@ def init_config():
 
 def setup_parser():
     try:
-        __version__ = importlib.metadata.version("atmorad-py")
+        __version__ = importlib.metadata.version("atmorad")
     except importlib.metadata.PackageNotFoundError:
         __version__ = "unknown"
 
