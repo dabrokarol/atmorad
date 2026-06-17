@@ -118,7 +118,7 @@ ds = run("simulation.toml")
 ## Configuration
 
 <details>
-<summary>The simulation is controlled via a TOML configuration file (click to expand).</summary>
+<summary>The simulation is controlled via a TOML configuration file. (click to expand)</summary>
 <!-- \[\[\[cog
 import cog
 cog.out(f'\\n`toml\n{open("src/atmorad/config/simulation.toml").read()}\n`')
