@@ -1,8 +1,11 @@
 from pathlib import Path
 
+import matplotlib
 import pytest
 
 from atmorad.config.loader import load_scenarios
+
+matplotlib.use("Agg")
 
 
 @pytest.fixture
