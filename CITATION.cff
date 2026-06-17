@@ -4,7 +4,7 @@ title: "atmorad"
 authors:
   - family-names: "Dąbrowski"
     given-names: "Karol"
-url: "https://github.com/dabrokarol/atmorad-py"
+url: "https://github.com/dabrokarol/atmorad"
 license: "MIT"
 
 version: 0.2.7
