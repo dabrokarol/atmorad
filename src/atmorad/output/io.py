@@ -62,7 +62,7 @@ class DataIO:
             self._initialize_directories()
 
     def output_summary(self) -> str:
-        return f"Result File:\n  {self.base_dir}/{self.results_filename}"
+        return f"Result file:\n  {self.base_dir}/{self.results_filename}"
 
     def _generate_candidate_dirs(self):
         """Yields valid directories sorted from newest to oldest."""

@@ -102,7 +102,7 @@ surface absorption       34.23%
 atmospheric absorption    0.03%
 ------------------------------
 
-Result File:
+Result file:
   results/demo001/atmorad_demo001_baseline.nc
 ```
 
